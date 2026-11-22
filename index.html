@@ -4,39 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>
-    // Limpa parâmetros de proveniência inseridos em links de terceiros.
-    // Não altera o alojamento nem o domínio da página.
+    // Remove parâmetros de seguimento para manter o endereço limpo.
     (() => {
       try {
-        const current = new URL(window.location.href);
+        const url = new URL(location.href);
         let changed = false;
-        for (const [key, value] of [...current.searchParams.entries()]) {
-          if (key.toLowerCase() === 'utm_source' && value.toLowerCase().includes('chatgpt')) {
-            current.searchParams.delete(key);
+        for (const key of [...url.searchParams.keys()]) {
+          if (/^(utm_|fbclid$|gclid$)/i.test(key)) {
+            url.searchParams.delete(key);
             changed = true;
           }
         }
-        if (changed) {
-          window.history.replaceState(window.history.state, '', current.pathname + current.search + current.hash);
-        }
-      } catch (_) {
-        // Em navegadores antigos, a página continua funcional.
-      }
+        if (changed) history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+      } catch (_) {}
     })();
   </script>
   <meta name="theme-color" content="#080e1c">
-  <meta name="description" content="BeOriginalEXE — projetos digitais, aplicações e criação independente de Márcio Serrano, Coimbra, Portugal.">
+  <meta name="description" content="BeOriginalX — projetos digitais, aplicações e criação independente de Coimbra, Portugal.">
   <meta name="color-scheme" content="dark">
-  <meta name="author" content="Márcio Serrano">
+  <meta name="author" content="BeOriginalX">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="BeOriginalEXE">
+  <meta property="og:site_name" content="BeOriginalX">
   <meta property="og:locale" content="pt_PT">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="BeOriginalEXE — Márcio Serrano">
+  <meta name="twitter:title" content="BeOriginalX — BeOriginalX">
   <meta name="twitter:description" content="Criação e projetos digitais independentes · Coimbra, Portugal">
-  <meta property="og:title" content="BeOriginalEXE — Márcio Serrano | Coimbra, Portugal">
-  <meta property="og:description" content="Plataforma de projetos e criação digital de Márcio Serrano. Coimbra, Portugal.">
-  <title>BeOriginalEXE | Márcio Serrano — Coimbra, Portugal</title>
+  <meta property="og:title" content="BeOriginalX — Criação digital independente">
+  <meta property="og:description" content="Plataforma de projetos e criação digital de BeOriginalX. Coimbra, Portugal.">
+  <title>BeOriginalX | Coimbra, Portugal</title>
   <script>
     // Garante a disposição mobile mesmo quando o Chrome pede a versão de computador.
     (() => {
@@ -174,7 +169,7 @@
   <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
   <div class="bg-glow" aria-hidden="true"></div><div class="bg-grid" aria-hidden="true"></div>
   <header class="topbar"><div class="shell topinner">
-    <a class="brand" href="#inicio" aria-label="BeOriginalEXE, início"><span class="mark" aria-hidden="true">b›</span><span class="brand-name">BeOriginal<b>EXE</b></span></a>
+    <a class="brand" href="#inicio" aria-label="BeOriginalX, início"><span class="mark" aria-hidden="true">b›</span><span class="brand-name">BeOriginal<b>X</b></span></a>
     <nav aria-label="Navegação principal"><a href="#explorar">Projetos</a><a href="#manifesto" data-small="hide">Manifesto</a><a href="#contacto">Sobre</a></nav>
     <span class="header-pill">●  PROJECT LAB</span>
   </div></header>
@@ -183,7 +178,7 @@
       <div><div class="eyebrow">Independent digital lab · Portugal</div><h1>Ser original<br>é só o <em>início.</em></h1>
         <p class="lede">Uma nova forma de transformar ideias em experiências digitais. Criar, experimentar e executar — sem limites para a imaginação.</p>
         <div class="actions"><a class="btn btn-primary" href="#explorar">Explorar projetos <span aria-hidden="true">↗</span></a><a class="btn" href="#manifesto">Conhecer o conceito</a></div>
-        <span class="mini-note">BeOriginalEXE · Create. Innovate. Execute.</span>
+        <span class="mini-note">BeOriginalX · Create. Innovate. Execute.</span>
       </div>
       <div class="stage" aria-hidden="true"><div class="halo"></div><div class="halo"></div><div class="halo"></div>
         <div class="core"><div class="big">b›</div><div class="tiny">EXECUTE IDEAS</div></div>
@@ -210,9 +205,9 @@
         <div class="principles"><div class="principle"><span class="index">01</span><div><strong>Originalidade por princípio</strong><p>Desenvolver projetos distintos e com identidade reconhecível.</p></div></div><div class="principle"><span class="index">02</span><div><strong>Tecnologia com propósito</strong><p>Explorar ferramentas que ofereçam utilidade e boas experiências.</p></div></div><div class="principle"><span class="index">03</span><div><strong>Evolução contínua</strong><p>Construir, testar, melhorar e documentar cada nova etapa.</p></div></div></div>
       </div>
     </section>
-    <section id="contacto" class="shell" aria-label="Sobre a plataforma"><div class="cta"><div><div class="eyebrow">Primeiro capítulo</div><h2>O laboratório está a nascer.</h2><p>Esta é a primeira versão do espaço BeOriginalEXE. O catálogo, as aplicações e a área privada serão apresentados quando estiverem efetivamente disponíveis.</p></div><a class="btn btn-primary" href="#inicio">Voltar ao início ↑</a></div></section>
+    <section id="contacto" class="shell" aria-label="Sobre a plataforma"><div class="cta"><div><div class="eyebrow">Primeiro capítulo</div><h2>O laboratório está a nascer.</h2><p>Esta é a primeira versão do espaço BeOriginalX. O catálogo, as aplicações e a área privada serão apresentados quando estiverem efetivamente disponíveis.</p></div><a class="btn btn-primary" href="#inicio">Voltar ao início ↑</a></div></section>
   </main>
-  <footer class="footer"><div class="shell footer-row"><small>© <span id="year">2026</span> BeOriginalEXE — Márcio Serrano — Coimbra, Portugal.<br>Todos os direitos reservados.</small><div class="footer-nav"><a href="#inicio">Início</a><a href="#explorar">Projetos</a><a href="#manifesto">Conceito</a></div></div></footer>
+  <footer class="footer"><div class="shell footer-row"><small>© <span id="year">2026</span> BeOriginalX — Coimbra, Portugal.<br>Todos os direitos reservados.</small><div class="footer-nav"><a href="#inicio">Início</a><a href="#explorar">Projetos</a><a href="#manifesto">Conceito</a></div></div></footer>
   <dialog id="detail-dialog" aria-labelledby="modal-title"><div class="modal-body"><div id="modal-kicker" class="modal-kicker">LABORATÓRIO</div><h2 id="modal-title"></h2><p id="modal-description"></p><button class="btn btn-primary" type="button" id="modal-close">Fechar</button></div></dialog>
   <script>
     (() => {
@@ -223,7 +218,7 @@
         experience:['EXPERIENCE','Experience','Zona de experimentação visual: interfaces, protótipos e experiências interativas.'],
         cloud:['CLOUD SPACE','Cloud Space','O armazenamento privado ainda não está implementado. Antes de aceitar uploads serão necessários autenticação, armazenamento seguro, limites de utilização e mecanismos de recuperação.'],
         identity:['IDENTITY','Identity','Um espaço para apresentar identidades visuais, marcas e conceitos criativos.'],
-        projects:['OPEN PROJECTS','Open Projects','Catálogo central dos projetos BeOriginalEXE. Novos trabalhos surgirão aqui após publicação e validação.']
+        projects:['OPEN PROJECTS','Open Projects','Catálogo central dos projetos BeOriginalX. Novos trabalhos surgirão aqui após publicação e validação.']
       };
       const input=document.getElementById('search');const cards=[...document.querySelectorAll('.project')];const filters=[...document.querySelectorAll('[data-filter]')];
       const count=document.getElementById('search-status');const empty=document.getElementById('noresults');let category='todos';
