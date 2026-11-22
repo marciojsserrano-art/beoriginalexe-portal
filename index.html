@@ -103,6 +103,50 @@
       html.phone-layout .floating{padding:8px}
       html.phone-layout .project{padding:24px}
     }
+    /* Correção estrutural de margens no Samsung e browsers em modo desktop.
+       O browser pode apresentar uma viewport de 980px num telefone.
+       Esta regra usa CSS puro e não depende de JavaScript/identificação do aparelho. */
+    @media (max-width:1150px), (hover:none) and (pointer:coarse) {
+      html,body{max-width:100%;overflow-x:clip}
+      body{padding:10mm!important;min-width:0!important}
+      .shell,html.phone-layout .shell{width:100%;max-width:100%;padding-inline:0!important}
+      .topbar{top:10mm!important;border-radius:16px}
+      .topinner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;height:auto;min-height:70px;padding:14px 0}
+      .brand{min-width:0;max-width:100%}
+      .brand-name{font-size:clamp(17px,4.5vw,21px);white-space:normal;overflow-wrap:break-word}
+      .header-pill{display:none}
+      nav{display:flex;gap:12px;flex-wrap:wrap}
+      nav a{font-size:13px}
+      nav a[data-small="hide"]{display:none}
+      .hero{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:16px;padding:52px 0 32px}
+      .hero > *{min-width:0}
+      .hero h1{font-size:clamp(35px,8.5vw,58px);line-height:1.1;overflow-wrap:break-word}
+      .lede{font-size:16px;line-height:1.75}
+      .stage{width:100%;max-width:100%;min-height:320px;overflow:hidden;border-radius:18px}
+      .halo{max-width:94%}
+      .strip{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:14px 26px;padding:25px 0}
+      .section{padding:62px 0}
+      .section-top{display:block}
+      .section h2{font-size:clamp(30px,7vw,43px);line-height:1.16}
+      .section-desc{margin-top:17px}
+      .tools{gap:14px}
+      .search-wrap{min-width:0;width:100%;max-width:none;flex:1 1 100%}
+      .filters{gap:10px}
+      .projects{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:18px}
+      .project{width:100%;min-width:0;min-height:225px;padding:clamp(23px,5vw,31px);overflow-wrap:break-word}
+      .project h3{font-size:22px}
+      .project p{font-size:15px;line-height:1.72}
+      .project .meta{flex-wrap:wrap;gap:12px}
+      .manifesto{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:18px}
+      .statement{padding:clamp(24px,5vw,32px)}
+      .principle{padding:clamp(19px,4vw,25px)}
+      .cta{display:block;margin:20px 0 64px;padding:clamp(24px,5vw,33px)}
+      .cta .btn{margin-top:23px}
+      .footer-row{align-items:flex-start;gap:19px}
+      .footer small{font-size:13px;line-height:1.65}
+      .footer-nav{flex-wrap:wrap;gap:14px 20px}
+      dialog{max-width:calc(100vw - 20mm)}
+    }
   </style>
 </head>
 <body>
