@@ -10,6 +10,17 @@
   <meta property="og:title" content="BeOriginalEXE — Create. Innovate. Execute.">
   <meta property="og:description" content="Ideias sem limites. Projetos com identidade.">
   <title>BeOriginalEXE — Create. Innovate. Execute.</title>
+  <script>
+    // Garante a disposição mobile mesmo quando o Chrome pede a versão de computador.
+    (() => {
+      const ua = navigator.userAgent || '';
+      const touch = (navigator.maxTouchPoints || 0) > 0;
+      const portrait = screen.orientation?.type?.startsWith('portrait') ?? (screen.height >= screen.width);
+      const phone = /Android|iPhone|iPod|Mobile/i.test(ua) ||
+        (touch && portrait && window.innerWidth <= 1200);
+      if (phone) document.documentElement.classList.add('phone-layout');
+    })();
+  </script>
   <style>
     :root{--bg:#080e1c;--panel:#121d31;--panel2:#18243a;--white:#f4f8ff;--muted:#9caec9;--teal:#61eee5;--violet:#9a80ff;--line:#33425f;--hot:#ffb8d3;--page:1160px;color-scheme:dark}
     [hidden]{display:none!important}
@@ -36,6 +47,56 @@
     @media(max-width:390px){nav a{font-size:11px}.topinner{gap:10px}nav{gap:10px}.brand-name{font-size:16px}.hero h1{font-size:clamp(32px,9.6vw,45px)}.stage{min-height:315px}.halo{width:min(285px,100%)}.halo:nth-of-type(2){width:min(223px,85%)}.halo:nth-of-type(3){width:min(178px,70%)}.floating{padding:9px}.f2{right:0}.f1{left:0}}
     @media(max-width:710px){dialog{max-width:calc(100vw - 20mm)}.modal-body{padding:22px}.modal-body h2{font-size:clamp(22px,6vw,29px)}.project,.principle,.statement{overflow-wrap:anywhere}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.halo,.core{animation:none!important}*,*:before,*:after{transition-duration:.01ms!important}}
+    /* Layout de telefone: margens físicas de cerca de 10 mm e conteúdo em coluna única. */
+    html.phone-layout body{padding:10mm;min-width:0}
+    html.phone-layout .shell{max-width:100%;width:100%;padding-left:0;padding-right:0}
+    html.phone-layout .topbar{top:10mm;border-radius:16px}
+    html.phone-layout .topinner{height:auto;min-height:67px;padding:12px 0;gap:12px;flex-wrap:wrap}
+    html.phone-layout .brand-name{font-size:clamp(17px,4.7vw,21px)}
+    html.phone-layout .mark{width:35px;height:35px}
+    html.phone-layout .header-pill,html.phone-layout nav a[data-small="hide"]{display:none}
+    html.phone-layout nav{gap:13px;flex-wrap:wrap}
+    html.phone-layout nav a{font-size:13px}
+    html.phone-layout .hero{padding:52px 0 26px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+    html.phone-layout .hero h1{font-size:clamp(36px,9.3vw,64px);line-height:1.08}
+    html.phone-layout .hero .lede{font-size:16px;line-height:1.7}
+    html.phone-layout .stage{min-height:340px;overflow:hidden;border-radius:22px}
+    html.phone-layout .halo{width:min(310px,94%)}
+    html.phone-layout .halo:nth-of-type(2){width:min(245px,78%)}
+    html.phone-layout .halo:nth-of-type(3){width:min(190px,62%)}
+    html.phone-layout .f1{left:3%}
+    html.phone-layout .f3{right:3%}
+    html.phone-layout .strip{flex-wrap:wrap;gap:14px;padding:24px 0;font-size:11px}
+    html.phone-layout .section{padding:58px 0}
+    html.phone-layout .section-top{display:block}
+    html.phone-layout .section h2{font-size:clamp(29px,7.7vw,42px);line-height:1.16}
+    html.phone-layout .section-desc{margin-top:16px}
+    html.phone-layout .tools{gap:14px}
+    html.phone-layout .search-wrap{min-width:0;max-width:none;flex-basis:100%}
+    html.phone-layout .filters{gap:9px}
+    html.phone-layout .filter{padding:11px 12px}
+    html.phone-layout .projects{grid-template-columns:minmax(0,1fr);gap:18px}
+    html.phone-layout .project{min-height:235px;padding:27px;overflow-wrap:anywhere}
+    html.phone-layout .project h3{font-size:22px}
+    html.phone-layout .project p{font-size:14px;line-height:1.7}
+    html.phone-layout .manifesto{grid-template-columns:minmax(0,1fr)}
+    html.phone-layout .statement{padding:28px;min-height:260px}
+    html.phone-layout .principle{padding:21px}
+    html.phone-layout .cta{display:block;margin:12px 0 62px;padding:29px 25px}
+    html.phone-layout .cta .btn{margin-top:24px}
+    html.phone-layout .footer-row{gap:17px}
+    html.phone-layout .footer-nav{gap:14px;flex-wrap:wrap}
+    html.phone-layout dialog{max-width:calc(100vw - 20mm)}
+    html.phone-layout .modal-body{padding:24px}
+    html.phone-layout .modal-body h2{font-size:clamp(23px,7vw,29px)}
+    @media(max-width:400px){
+      html.phone-layout .topinner{align-items:flex-start}
+      html.phone-layout nav{width:100%;padding-top:3px}
+      html.phone-layout .hero h1{font-size:clamp(34px,9vw,42px)}
+      html.phone-layout .stage{min-height:295px}
+      html.phone-layout .floating{padding:8px}
+      html.phone-layout .project{padding:24px}
+    }
   </style>
 </head>
 <body>
