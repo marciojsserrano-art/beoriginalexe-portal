@@ -3,6 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>
+    // Limpa parâmetros de proveniência inseridos em links de terceiros.
+    // Não altera o alojamento nem o domínio da página.
+    (() => {
+      try {
+        const current = new URL(window.location.href);
+        let changed = false;
+        for (const [key, value] of [...current.searchParams.entries()]) {
+          if (key.toLowerCase() === 'utm_source' && value.toLowerCase().includes('chatgpt')) {
+            current.searchParams.delete(key);
+            changed = true;
+          }
+        }
+        if (changed) {
+          window.history.replaceState(window.history.state, '', current.pathname + current.search + current.hash);
+        }
+      } catch (_) {
+        // Em navegadores antigos, a página continua funcional.
+      }
+    })();
+  </script>
   <meta name="theme-color" content="#080e1c">
   <meta name="description" content="BeOriginalEXE — projetos digitais, aplicações e criação independente de Márcio Serrano, Coimbra, Portugal.">
   <meta name="color-scheme" content="dark">
