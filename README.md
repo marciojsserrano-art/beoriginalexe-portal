@@ -33,3 +33,7 @@ O uso de GitHub Pages gratuito está sujeito à continuidade da disponibilidade 
 BeOriginalX é o nome definido para a plataforma de projetos.
 
 **Identidade pública:** a marca é BeOriginalX; o nome pessoal do responsável não é apresentado no portal nem nos metadados públicos. **Rodapé:** © 2026 BeOriginalX — Coimbra, Portugal. Todos os direitos reservados. O ano é atualizado automaticamente no portal.
+
+## Domínio personalizado pretendido
+
+**beoriginalexe.eu.org** — escolhido, mas **ainda não registado nem aprovado** no EU.org. O serviço EU.org exige nameservers DNS previamente configurados e validação manual da candidatura. Manter o endereço GitHub Pages operacional até haver confirmação; só então configurar a zona DNS e o domínio personalizado no GitHub Pages. Não adicionar um ficheiro `CNAME` antes da confirmação do domínio e do plano DNS.
