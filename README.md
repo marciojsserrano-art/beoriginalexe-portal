@@ -30,4 +30,6 @@ O uso de GitHub Pages gratuito está sujeito à continuidade da disponibilidade 
 
 ## Identidade
 
-BeOriginalEXE é o nome definido para a plataforma de projetos. © 2026 BeOriginalEXE.
+BeOriginalEXE é o nome definido para a plataforma de projetos.
+
+**Rodapé oficial (usar em todos os sites BeOriginalEXE):** © 2026 BeOriginalEXE — Márcio Serrano — Coimbra, Portugal. Todos os direitos reservados. O ano é atualizado automaticamente no portal.
