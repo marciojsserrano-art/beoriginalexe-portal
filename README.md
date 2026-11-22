@@ -1,4 +1,4 @@
-# BeOriginalEXE — Portal 0.1
+# BeOriginalX — Portal 0.1
 
 **Create. Innovate. Execute.** Portal experimental de projetos digitais, independente da aplicação Versátil.
 
@@ -12,11 +12,11 @@ Para ativar o alojamento gratuito do GitHub Pages neste repositório público:
 3. Selecionar **main** e **/(root)** e carregar em **Save**.
 4. Confirmar o endereço publicado em **Settings → Pages**.
 
-Endereço previsto após a ativação: https://marciojsserrano-art.github.io/beoriginalexe-portal/
+O endereço provisório continua no alojamento GitHub Pages. A identificação da conta e o nome do alojamento só desaparecem do URL público quando existir um domínio alternativo efetivamente configurado.
 
 ## Funcionalidades
 
-- Página inicial com identidade BeOriginalEXE
+- Página inicial com identidade BeOriginalX
 - Catálogo de seis áreas de projeto
 - Pesquisa e filtros por categoria
 - Janelas informativas e navegação acessível
@@ -30,6 +30,6 @@ O uso de GitHub Pages gratuito está sujeito à continuidade da disponibilidade 
 
 ## Identidade
 
-BeOriginalEXE é o nome definido para a plataforma de projetos.
+BeOriginalX é o nome definido para a plataforma de projetos.
 
-**Rodapé oficial (usar em todos os sites BeOriginalEXE):** © 2026 BeOriginalEXE — Márcio Serrano — Coimbra, Portugal. Todos os direitos reservados. O ano é atualizado automaticamente no portal.
+**Identidade pública:** a marca é BeOriginalX; o nome pessoal do responsável não é apresentado no portal nem nos metadados públicos. **Rodapé:** © 2026 BeOriginalX — Coimbra, Portugal. Todos os direitos reservados. O ano é atualizado automaticamente no portal.
